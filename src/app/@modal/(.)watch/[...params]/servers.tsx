@@ -4,6 +4,17 @@ import { Tally1, Tally2, Tally3, Tally4, Tally5 } from "lucide-react";
 export function getServers(id: string, season?: string, episode?: string) {
   return [
     {
+      name: "Server 3",
+      sublabel: "Sandbox support(No Ads)",
+      isRecommended: true,
+      sandboxSupport: true,
+      description: "New Server.",
+      movieLink: `https://vidnest.fun/movie/${id}`,
+      tvLink: `https://vidnest.fun/tv/${id}/${season}/${episode}`,
+      icon: <Tally3 />,
+      value: "server5",
+    },
+    {
       name: "Server 1",
       isRecommended: true,
       sandboxSupport: true,
@@ -28,17 +39,6 @@ export function getServers(id: string, season?: string, episode?: string) {
       value: "server1",
     },
 
-    {
-      name: "Server 3",
-      sublabel: "Sandbox support(No Ads)",
-      isRecommended: true,
-      sandboxSupport: true,
-      description: "New Server.",
-      movieLink: `https://vidnest.fun/movie/${id}`,
-      tvLink: `https://vidnest.fun/tv/${id}/${season}/${episode}`,
-      icon: <Tally3 />,
-      value: "server5",
-    },
     {
       name: "Server 4",
       sublabel: "Doesn't support sandbox (w/ Ads)",
