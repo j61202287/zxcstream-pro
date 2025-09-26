@@ -4,18 +4,18 @@ import { Tally1, Tally2, Tally3, Tally4, Tally5 } from "lucide-react";
 export function getServers(id: string, season?: string, episode?: string) {
   return [
     {
-      name: "Server 3",
+      name: "Server 1",
       sublabel: "Sandbox support(No Ads)",
       isRecommended: true,
       sandboxSupport: true,
-      description: "New Server.",
+      description: "New Updated Server.",
       movieLink: `https://vidnest.fun/movie/${id}`,
       tvLink: `https://vidnest.fun/tv/${id}/${season}/${episode}`,
       icon: <Tally3 />,
-      value: "server5",
+      value: "server1",
     },
     {
-      name: "Server 1",
+      name: "Server 2",
       isRecommended: true,
       sandboxSupport: true,
       sublabel: "Sandbox support(No Ads)",
@@ -24,10 +24,10 @@ export function getServers(id: string, season?: string, episode?: string) {
       movieLink: `https://vidsrc.cc/v2/embed/movie/${id}?autoPlay=true`,
       tvLink: `https://vidsrc.cc/v2/embed/tv/${id}/${season}/${episode}?autoPlay=true`,
       icon: <Tally1 />,
-      value: "server1",
+      value: "server2",
     },
     {
-      name: "Server 2",
+      name: "Server 3",
       isRecommended: false,
       sandboxSupport: true,
       sublabel: "Sandbox support(No Ads)",
@@ -36,7 +36,7 @@ export function getServers(id: string, season?: string, episode?: string) {
       movieLink: `https://zxczxc-pi.vercel.app/player/movie/${id}`,
       tvLink: `https://zxczxc-pi.vercel.app/player/tv/${id}/${season}/${episode}`,
       icon: <Tally2 />,
-      value: "server1",
+      value: "server3",
     },
 
     {
@@ -49,7 +49,7 @@ export function getServers(id: string, season?: string, episode?: string) {
       movieLink: `https://player.videasy.net/movie/${id}?nextEpisode=true&autoplayNextEpisode=true&episodeSelector=true&color=8B5CF6"`,
       tvLink: `https://player.videasy.net/tv/${id}/${season}/${episode}?nextEpisode=true&autoplayNextEpisode=true&episodeSelector=true&color=8B5CF6"`,
       icon: <Tally4 />,
-      value: "server2",
+      value: "server4",
     },
 
     {
@@ -62,7 +62,7 @@ export function getServers(id: string, season?: string, episode?: string) {
       movieLink: `https://vidsrc.xyz/embed/movie/${id}`,
       tvLink: `https://vidsrc.xyz/embed/tv?tmdb=${id}&season=${season}&episode=${episode}`,
       icon: <Tally5 />,
-      value: "server4",
+      value: "server5",
     },
   ];
 
