@@ -25,7 +25,7 @@ let showlist = [
   { id: "240411", media_type: "tv" },
   { id: "1214509", media_type: "movie" },
   { id: "2190", media_type: "tv" },
-  { id: "60625", media_type: "tv" },
+  // { id: "60625", media_type: "tv" },
   { id: "508947", media_type: "movie" },
   // { id: "235930", media_type: "tv" },
   { id: "1425045", media_type: "movie" },
