@@ -5,17 +5,6 @@ export function getServers(id: string, season?: string, episode?: string) {
   return [
     {
       name: "Server 1",
-      sublabel: "Sandbox support(No Ads)",
-      isRecommended: true,
-      sandboxSupport: true,
-      description: "New Updated Server.",
-      movieLink: `https://vidnest.fun/movie/${id}`,
-      tvLink: `https://vidnest.fun/tv/${id}/${season}/${episode}`,
-      icon: <Tally3 />,
-      value: "server1",
-    },
-    {
-      name: "Server 2",
       isRecommended: true,
       sandboxSupport: true,
       sublabel: "Sandbox support(No Ads)",
@@ -24,8 +13,20 @@ export function getServers(id: string, season?: string, episode?: string) {
       movieLink: `https://vidsrc.cc/v2/embed/movie/${id}?autoPlay=true`,
       tvLink: `https://vidsrc.cc/v2/embed/tv/${id}/${season}/${episode}?autoPlay=true`,
       icon: <Tally1 />,
+      value: "server1",
+    },
+    {
+      name: "Server 2",
+      sublabel: "Sandbox support(No Ads)",
+      isRecommended: true,
+      sandboxSupport: true,
+      description: "New Updated Server.",
+      movieLink: `https://vidnest.fun/movie/${id}`,
+      tvLink: `https://vidnest.fun/tv/${id}/${season}/${episode}`,
+      icon: <Tally3 />,
       value: "server2",
     },
+
     {
       name: "Server 3",
       isRecommended: false,
