@@ -20,7 +20,7 @@ import { toast } from "sonner";
 let showlist = [
   { id: "1038392", media_type: "movie" },
   { id: "1078605", media_type: "movie" },
-  { id: "297608", media_type: "movie" },
+  { id: "1373445", media_type: "movie" },
   { id: "155", media_type: "movie" },
   { id: "240411", media_type: "tv" },
   { id: "1054867", media_type: "movie" },
