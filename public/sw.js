@@ -92,7 +92,7 @@
 //   event.notification.close();
 //   event.waitUntil(clients.openWindow("/"));
 // });
-const CACHE_NAME = "zxc-stream-v2.62";
+const CACHE_NAME = "zxc-stream-v2.65";
 const urlsToCache = [
   "/",
   "/manifest.json",
@@ -217,7 +217,7 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
 
   // Skip caching for TMDB API requests - always fetch fresh data
-  if (url.hostname === 'api.themoviedb.org') {
+  if (url.hostname === "api.themoviedb.org") {
     event.respondWith(fetch(request));
     return;
   }
