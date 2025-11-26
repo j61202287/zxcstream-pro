@@ -10,8 +10,8 @@ export function getServers(id: string, season?: string, episode?: string) {
       sublabel: "Sandbox support(No Ads)",
       description:
         "Fast and ad-free streaming. Limited to movies and may occasionally be unavailable.",
-      movieLink: `https://zxcstream.xyz/embed/movie/${id}?autoPlay=true`,
-      tvLink: `https://zxcstream.xyz/embed/tv/${id}/${season}/${episode}?autoPlay=true`,
+      movieLink: `https://zxcstream.xyz/player/movie/${id}?autoPlay=true`,
+      tvLink: `https://zxcstream.xyz/player/tv/${id}/${season}/${episode}?autoPlay=true`,
       icon: <Tally1 />,
       value: "server1",
     },
