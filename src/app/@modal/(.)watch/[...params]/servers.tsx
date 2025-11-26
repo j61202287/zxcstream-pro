@@ -10,8 +10,8 @@ export function getServers(id: string, season?: string, episode?: string) {
       sublabel: "Sandbox support(No Ads)",
       description:
         "Fast and ad-free streaming. Limited to movies and may occasionally be unavailable.",
-      movieLink: `https://tanime.tv/movie/${id}?autoPlay=true`,
-      tvLink: `https://tanime.tv/tv/${id}/${season}/${episode}?autoPlay=true`,
+      movieLink: `https://zxcstream.xyz/movie/${id}?autoPlay=true`,
+      tvLink: `https://zxcstream.xyz/tv/${id}/${season}/${episode}?autoPlay=true`,
       icon: <Tally1 />,
       value: "server1",
     },
