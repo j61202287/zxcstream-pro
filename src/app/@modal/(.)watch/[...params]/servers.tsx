@@ -4,12 +4,12 @@ import { Tally1, Tally2, Tally3, Tally4, Tally5 } from "lucide-react";
 export function getServers(id: string, season?: string, episode?: string) {
   return [
     {
-      name: "Main Server",
+      name: "Server 1",
       isRecommended: true,
       sandboxSupport: true,
-      sublabel: "(No Ads)",
+      sublabel: "Main Server",
       description:
-        "ZXC[STREAM] Main Server – Tagalog-dubbed and other language content available.",
+        "ZXC[STREAM] Main Server – Tagalog-dubbed content available.",
       movieLink: `https://zxcstream.xyz/player/movie/${id}?autoPlay=true`,
       tvLink: `https://zxcstream.xyz/player/tv/${id}/${season}/${episode}?autoPlay=true`,
       icon: <Tally1 />,
@@ -17,20 +17,21 @@ export function getServers(id: string, season?: string, episode?: string) {
     },
 
     {
-      name: "Backup Main Server",
-      sublabel: "Sandbox support(No Ads)",
+      name: "Server 2",
+      sublabel: "Main Backup Server",
       isRecommended: true,
       sandboxSupport: true,
-      description: "Backup Server.",
-      movieLink: `https://zxcstream.xyz/embed/movie/${id}?autoPlay=true`,
-      tvLink: `https://zxcstream.xyz/embed/tv/${id}/${season}/${episode}?autoPlay=true`,
+      description: "Main Backup Server",
+      movieLink: `https://zxcstream.xyz/player/movie/${id}?autoPlay=true`,
+      tvLink: `https://zxcstream.xyz/player/tv/${id}/${season}/${episode}?autoPlay=true`,
+
       icon: <Tally3 />,
       value: "server2",
     },
 
     {
       name: "Server 3",
-      isRecommended: false,
+      isRecommended: true,
       sandboxSupport: false,
       sublabel: "Doesn't support sandbox (w/ Ads)",
       description:
