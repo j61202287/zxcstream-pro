@@ -22,8 +22,8 @@ export function getServers(id: string, season?: string, episode?: string) {
       isRecommended: true,
       sandboxSupport: true,
       description: "Main Backup Server",
-      movieLink: `https://zxcstream.xyz/player/movie/${id}?autoPlay=true`,
-      tvLink: `https://zxcstream.xyz/player/tv/${id}/${season}/${episode}?autoPlay=true`,
+      movieLink: `https://zxcstream.xyz/embed/movie/${id}?autoPlay=true`,
+      tvLink: `https://zxcstream.xyz/embed/tv/${id}/${season}/${episode}?autoPlay=true`,
 
       icon: <Tally3 />,
       value: "server2",
