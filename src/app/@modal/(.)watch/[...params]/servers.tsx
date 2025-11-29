@@ -4,26 +4,26 @@ import { Tally1, Tally2, Tally3, Tally4, Tally5 } from "lucide-react";
 export function getServers(id: string, season?: string, episode?: string) {
   return [
     {
-      name: "Server 1",
+      name: "Main Server",
       isRecommended: true,
       sandboxSupport: true,
-      sublabel: "Sandbox support(No Ads)",
+      sublabel: "(No Ads)",
       description:
-        "Fast and ad-free streaming. Limited to movies and may occasionally be unavailable.",
-      movieLink: `https://vidsrc.cc/v2/embed/movie/${id}?autoPlay=true`,
-      tvLink: `https://vidsrc.cc/v2/embed/tv/${id}/${season}/${episode}?autoPlay=true`,
+        "ZXC[STREAM] Main Server – Tagalog-dubbed and other language content available.",
+      movieLink: `https://zxcstream.xyz/player/movie/${id}?autoPlay=true`,
+      tvLink: `https://zxcstream.xyz/player/tv/${id}/${season}/${episode}?autoPlay=true`,
       icon: <Tally1 />,
       value: "server1",
     },
 
     {
-      name: "Server 2",
+      name: "Backup Main Server",
       sublabel: "Sandbox support(No Ads)",
       isRecommended: true,
       sandboxSupport: true,
-      description: "New Updated Server.",
-      movieLink: `https://vidup.to/movie/${id}`,
-      tvLink: `https://vidup.to/tv/${id}/${season}/${episode}`,
+      description: "Backup Server.",
+      movieLink: `https://zxcstream.xyz/embed/movie/${id}?autoPlay=true`,
+      tvLink: `https://zxcstream.xyz/embed/tv/${id}/${season}/${episode}?autoPlay=true`,
       icon: <Tally3 />,
       value: "server2",
     },
@@ -31,13 +31,12 @@ export function getServers(id: string, season?: string, episode?: string) {
     {
       name: "Server 3",
       isRecommended: false,
-      sandboxSupport: true,
-      sublabel: "Sandbox support(No Ads)",
+      sandboxSupport: false,
+      sublabel: "Doesn't support sandbox (w/ Ads)",
       description:
-        "ZXC[STREAM] Main Server – Tagalog-dubbed content available; some may not have subtitles.",
-
-      movieLink: `https://zxcstream.xyz/player/movie/${id}?autoPlay=true`,
-      tvLink: `https://zxcstream.xyz/player/tv/${id}/${season}/${episode}?autoPlay=true`,
+        "Fast and ad-free streaming. Limited to movies and may occasionally be unavailable.",
+      movieLink: `https://vidup.to/movie/${id}`,
+      tvLink: `https://vidup.to/tv/${id}/${season}/${episode}`,
       icon: <Tally2 />,
       value: "server3",
     },
