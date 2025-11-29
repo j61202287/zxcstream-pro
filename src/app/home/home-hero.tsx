@@ -111,50 +111,54 @@ export default function SwiperBackdrops() {
                   {meow.overview || "No description available."}
                 </p>
                 <div className="mt-5 space-x-2">
-                  <Link
-                    href={`/watch/${meow.media_type}/${meow.id}${
-                      meow.media_type === "tv" ? "/1/1" : ""
-                    }`}
-                    prefetch={true}
-                    scroll={false}
-                    onClick={() => {
-                      toast.custom((t) => (
-                        <div className="bg-background text-foreground w-full rounded-md border px-4 py-3 shadow-lg sm:w-[var(--width)]">
-                          <div className="flex gap-2">
-                            <div className="flex grow gap-3">
-                              <PlayCircle
-                                className="mt-0.5 shrink-0 text-emerald-500"
-                                size={16}
-                                aria-hidden="true"
-                              />
-                              <div className="flex grow justify-between gap-12">
-                                <p className="text-sm">
-                                  Now Playing: {meow.name || meow.title}
-                                </p>
-                              </div>
-                            </div>
-                            <Button
-                              variant="ghost"
-                              className="group -my-1.5 -me-2 size-8 shrink-0 p-0 hover:bg-transparent"
-                              onClick={() => toast.dismiss(t)}
-                              aria-label="Close banner"
-                            >
-                              <XIcon
-                                size={16}
-                                className="opacity-60 transition-opacity group-hover:opacity-100"
-                                aria-hidden="true"
-                              />
-                            </Button>
-                          </div>
-                        </div>
-                      ));
-                    }}
+                  <Button
+                    asChild
+                    className="bg-red-950/50 hover:bg-zinc-900 border-red-700 border-1 text-white"
                   >
-                    <Button className="bg-red-950/50 hover:bg-zinc-900 border-red-700 border-1 text-white">
+                    <Link
+                      href={`/watch/${meow.media_type}/${meow.id}${
+                        meow.media_type === "tv" ? "/1/1" : ""
+                      }`}
+                      prefetch={true}
+                      scroll={false}
+                      onClick={() => {
+                        toast.custom((t) => (
+                          <div className="bg-background text-foreground w-full rounded-md border px-4 py-3 shadow-lg sm:w-[var(--width)]">
+                            <div className="flex gap-2">
+                              <div className="flex grow gap-3">
+                                <PlayCircle
+                                  className="mt-0.5 shrink-0 text-emerald-500"
+                                  size={16}
+                                  aria-hidden="true"
+                                />
+                                <div className="flex grow justify-between gap-12">
+                                  <p className="text-sm">
+                                    Now Playing: {meow.name || meow.title}
+                                  </p>
+                                </div>
+                              </div>
+                              <Button
+                                variant="ghost"
+                                className="group -my-1.5 -me-2 size-8 shrink-0 p-0 hover:bg-transparent"
+                                onClick={() => toast.dismiss(t)}
+                                aria-label="Close banner"
+                              >
+                                <XIcon
+                                  size={16}
+                                  className="opacity-60 transition-opacity group-hover:opacity-100"
+                                  aria-hidden="true"
+                                />
+                              </Button>
+                            </div>
+                          </div>
+                        ));
+                      }}
+                    >
                       <Play />
                       Play Now
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
+
                   <Link
                     href={`${meow.media_type}/${meow.id}`}
                     prefetch={true}

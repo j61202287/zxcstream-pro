@@ -216,27 +216,28 @@ export default function WatchPage() {
                 </div>
               )} */}
 
-              <Button
-                size="lg"
-                className="absolute left-3 top-3 bg-black font-semibold cursor-pointer border-1"
-                variant="secondary"
-                onClick={() => {
-                  saveCurrentProgress();
-                  setTimeout(() => router.back(), 100);
-                }}
-              >
-                <ArrowLeft strokeWidth={3} /> Back
-              </Button>
+              <div className="absolute lg:top-10 top-6 left-3 flex  items-center gap-3">
+                <Button
+                  size="lg"
+                  className="  font-semibold cursor-pointer border-1"
+                  variant="outline"
+                  onClick={() => {
+                    saveCurrentProgress();
+                    setTimeout(() => router.back(), 100);
+                  }}
+                >
+                  <ArrowLeft strokeWidth={3} />
+                </Button>
 
-              <Button
-                size="lg"
-                className="absolute right-3 top-3 bg-black  font-semibold  cursor-pointer border-1"
-                variant="secondary"
-                onClick={() => setOpen(true)}
-              >
-                Server <ArrowUpDown />
-              </Button>
-
+                <Button
+                  size="lg"
+                  className="  font-semibold  cursor-pointer border-1"
+                  variant="outline"
+                  onClick={() => setOpen(true)}
+                >
+                  Server <ArrowUpDown />
+                </Button>
+              </div>
               {src && (
                 <iframe
                   key={`${src}-${sandboxEnabled}`}
