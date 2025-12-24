@@ -5,6 +5,17 @@ export function getServers(id: string, season?: string, episode?: string) {
   return [
     {
       name: "Server 1",
+      isRecommended: true,
+      sandboxSupport: true,
+      sublabel: "Main Server",
+      description: "ZXC[STREAM] Main Server",
+      movieLink: `https://zxcstream.xyz/player/movie/${id}?autoPlay=true`,
+      tvLink: `https://zxcstream.xyz/player/tv/${id}/${season}/${episode}?autoPlay=true`,
+      icon: <Tally1 />,
+      value: "server1",
+    },
+    {
+      name: "Server 2",
       sublabel: "Main Backup Server",
       isRecommended: true,
       sandboxSupport: true,
@@ -12,20 +23,8 @@ export function getServers(id: string, season?: string, episode?: string) {
       movieLink: `https://zxcstream.xyz/embed/movie/${id}?autoPlay=true`,
       tvLink: `https://zxcstream.xyz/embed/tv/${id}/${season}/${episode}?autoPlay=true`,
 
-      icon: <Tally3 />,
+      icon: <Tally2 />,
       value: "server2",
-    },
-    {
-      name: "Server 2",
-      isRecommended: true,
-      sandboxSupport: true,
-      sublabel: "Main Server",
-      description:
-        "ZXC[STREAM] Main Server – Tagalog-dubbed content available.",
-      movieLink: `https://zxcstream.xyz/player/movie/${id}?autoPlay=true`,
-      tvLink: `https://zxcstream.xyz/player/tv/${id}/${season}/${episode}?autoPlay=true`,
-      icon: <Tally1 />,
-      value: "server1",
     },
 
     {
@@ -37,7 +36,7 @@ export function getServers(id: string, season?: string, episode?: string) {
         "Fast and ad-free streaming. Limited to movies and may occasionally be unavailable.",
       movieLink: `https://vidup.to/movie/${id}`,
       tvLink: `https://vidup.to/tv/${id}/${season}/${episode}`,
-      icon: <Tally2 />,
+      icon: <Tally3 />,
       value: "server3",
     },
 
