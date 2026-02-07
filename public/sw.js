@@ -92,7 +92,7 @@
 //   event.notification.close();
 //   event.waitUntil(clients.openWindow("/"));
 // });
-const CACHE_NAME = "zxc-stream-v2.77";
+const CACHE_NAME = "zxc-stream-v2.78";
 const urlsToCache = [
   "/",
   "/manifest.json",
@@ -125,14 +125,14 @@ self.addEventListener("install", (event) => {
             })
             .catch((error) => {
               console.error(`❌ Failed to cache ${url}:`, error);
-            })
-        )
+            }),
+        ),
       ).then(() => {
         console.log("✅ Caching process completed!");
         // Force the new service worker to activate immediately
         return self.skipWaiting();
       });
-    })
+    }),
   );
 });
 
@@ -149,8 +149,8 @@ self.addEventListener("activate", (event) => {
               console.log("Deleting old cache:", cacheName);
               return caches.delete(cacheName);
             }
-          })
-        )
+          }),
+        ),
       ),
       // Take control of all clients immediately
       self.clients.claim(),
@@ -162,7 +162,7 @@ self.addEventListener("activate", (event) => {
           client.postMessage({ type: "SW_UPDATED" });
         });
       });
-    })
+    }),
   );
 });
 
@@ -239,7 +239,7 @@ self.addEventListener("fetch", (event) => {
         .catch(() => {
           // If network fails, try cache
           return caches.match(request);
-        })
+        }),
     );
   } else {
     // For static assets, use cache-first strategy
@@ -258,7 +258,7 @@ self.addEventListener("fetch", (event) => {
           }
           return response;
         });
-      })
+      }),
     );
   }
 });
